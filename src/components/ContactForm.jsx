@@ -13,6 +13,7 @@ export default function ContactForm({ onSubmit }) {
         .max(50, "Maksimum 50 znaków!")
         .required("Wymagane"),
       number: Yup.string()
+        .matches(/^[\d-]+$/, "Nieprawidłowy format numeru")
         .min(3, "Minimum 3 znaki!")
         .max(20, "Maksimum 20 znaków!")
         .required("Wymagane"),
@@ -38,6 +39,7 @@ export default function ContactForm({ onSubmit }) {
 
       <input
         name="number"
+        type="tel"
         placeholder="Numer telefonu"
         value={formik.values.number}
         onChange={formik.handleChange}
