@@ -1,0 +1,24 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 200px;
+  align-self: center;
+  padding: 5px 10px;
+  border: 1px transparent;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+}
+
+button {
+  width: fit-content;
+  align-self: center;
+  transition: 0.5s;
+}
